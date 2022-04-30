@@ -45,4 +45,27 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+
+    public function favorites()
+    {
+        return $this->hasMany(Favorite::class);
+    }
+
+    public function favorite($post)
+    {
+        if($this->isFavorited($post)) {
+            return $this->favorites()->where([
+                ['favorites.post_id', $post->id]
+            ])->delete();
+        }
+
+        return $this->favorites()->create(['post_id' => $post->id, 'user_id'=> $this->id]);
+    }
+
+    public function isFavorited($object)
+    {
+        return $this->favorites()->where([
+            ['favorites.post_id', $object->id]
+        ])->exists();
+    }
 }

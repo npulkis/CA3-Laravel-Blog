@@ -26,3 +26,9 @@ Route::get('/aboutus',function (){
     return view('aboutus');
 } );
 
+
+Route::post('/blog/favorite/{slug}/{user_id}', [App\Http\Controllers\PostsController::class, 'favorite']);
+
+Route::post('/favorite/{slug}/{user_id}', [App\Http\Controllers\PostsController::class, 'unfavorite']);
+
+Route::get('/favorites', [App\Http\Controllers\PostsController::class, 'favorites']);

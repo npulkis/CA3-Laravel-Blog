@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class PostsController extends Controller
 {
- 
+
     public function __construct()
     {
         $this->middleware('auth', ['except' => ['index', 'show']]);
@@ -127,6 +128,35 @@ class PostsController extends Controller
 
         return redirect('/blog')
             ->with('message', 'Your post has been deleted!');
+    }
+
+
+    public function favorites()
+    {
+        return view('favorites')
+            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+    }
+
+    public function favorite($slug, $user_id)
+    {
+        $object = Post::where('slug', $slug)->first();
+
+        $user = User::where('id', $user_id)->first();
+
+        $user->favorite($object);
+
+        return redirect('/blog');
+    }
+
+    public function unfavorite($slug, $user_id)
+    {
+        $object = Post::where('slug', $slug)->first();
+
+        $user = User::where('id', $user_id)->first();
+
+        $user->favorite($object);
+
+        return redirect('/favorites');
     }
 }
 
