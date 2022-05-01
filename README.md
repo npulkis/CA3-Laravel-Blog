@@ -5,12 +5,12 @@
 •	Node 12.13.0 or higher <br>
 
 
-##Features
-• Create and edit blog posts
-• Favorite blog posts
-• Comment on blog posts
+## Features
+• Create and edit blog posts <br>
+• Favorite blog posts <br>
+• Comment on blog posts <br>
 
-##Previews
+## Previews
 ### Home Page
 ![index](https://github.com/nthnplks21/CA3-Laravel-Blog/blob/main/ReadMeImages/blog1.png?raw=true)
 
