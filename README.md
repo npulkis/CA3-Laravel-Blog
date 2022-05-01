@@ -6,19 +6,19 @@
 
 
 ##Features
-* Create and edit blog posts
-* Favorite blog posts
-* Comment on blog posts
+• Create and edit blog posts
+• Favorite blog posts
+• Comment on blog posts
 
 ##Previews
-#### Home Page
+### Home Page
 ![index](https://github.com/nthnplks21/CA3-Laravel-Blog/blob/main/ReadMeImages/blog1.png?raw=true)
 
-#### Comment section
+### Comment section
 ![comment](https://github.com/nthnplks21/CA3-Laravel-Blog/blob/main/ReadMeImages/blog2.png?raw=true)
 
 
-#### Favorite section
+### Favorite section
 ![fav](https://github.com/nthnplks21/CA3-Laravel-Blog/blob/main/ReadMeImages/blog3.png?raw=true)
 
 
