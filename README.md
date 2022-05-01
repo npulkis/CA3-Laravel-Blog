@@ -1,15 +1,27 @@
 ## Laravel Food Blog
 
-
-
-
-
-
-
-
 ## Requirements
 •	PHP 7.3 or higher <br>
 •	Node 12.13.0 or higher <br>
+
+
+##Features
+* Create and edit blog posts
+* Favorite blog posts
+* Comment on blog posts
+
+##Previews
+#### Home Page
+![index](https://github.com/nthnplks21/CA3-Laravel-Blog/blob/main/ReadMeImages/blog1.png?raw=true)
+
+#### Comment section
+![comment](https://github.com/nthnplks21/CA3-Laravel-Blog/blob/main/ReadMeImages/blog2.png?raw=true)
+
+
+#### Favorite section
+![fav](https://github.com/nthnplks21/CA3-Laravel-Blog/blob/main/ReadMeImages/blog3.png?raw=true)
+
+
 
 ## Usage <br>
 Setting up your development environment on your local machine: <br>
@@ -45,6 +57,3 @@ Migrate the tables
 ```
 php artisan migrate
 ```
-
-## Contributing
-Do not hesitate to contribute to the project by adapting or adding features ! Bug reports or pull requests are welcome.
