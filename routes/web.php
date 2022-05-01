@@ -18,6 +18,7 @@ use App\Http\Controllers\CommentsController;
 
 Route::get('/', [PagesController::class, 'index']);
 
+
 Route::resource('/blog', PostsController::class);
 
 Auth::routes();

@@ -19,11 +19,13 @@
         {{ $post->description }}
 
     </p>
+    <h6>Share this blogpost!</h6>
+    <div class="container mt-4 flex">
 
-    <div class="container mt-4">
-        <h6>Share this blogpost!</h6>
-        {!! $share = \Share::page($currentURL = url()->current(),'Check out this blog post')->facebook()->twitter()->reddit()->whatsapp();
-!!}
+        {!! $share = \Share::page($currentURL = url()->current(),'Check out this blog post')->facebook();!!}
+        {!!  $share = \Share::page($currentURL = url()->current(),'Check out this blog post')->twitter(); !!}
+        {!!  $share = \Share::page($currentURL = url()->current(),'Check out this blog post')->reddit(); !!}
+        {!!  $share = \Share::page($currentURL = url()->current(),'Check out this blog post')->whatsapp(); !!}
     </div>
 
     <h2 class="mt-6 text-2xl leading-10 tracking-tight font-bold text-center">Comments</h2>
