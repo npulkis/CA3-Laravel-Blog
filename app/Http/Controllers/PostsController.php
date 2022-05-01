@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Post;
@@ -74,7 +75,9 @@ class PostsController extends Controller
     public function show($slug)
     {
         return view('blog.show')
-            ->with('post', Post::where('slug', $slug)->first());
+            ->with('post', Post::where('slug', $slug)->first())
+            ->with('comments', Comment::where('post_slug','=',$slug)->get());
+
     }
 
     /**
